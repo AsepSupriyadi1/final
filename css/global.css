@@ -39,6 +39,10 @@ body {
     font-family: 'Inter', sans-serif !important;
 }
 
+.profile {
+    width: 100%;
+}
+
 
 .body {
     background-color: var(--black1);
@@ -197,6 +201,21 @@ ul {
     object-fit: contain !important;
 }
 
+@media only screen and (max-width: 600px) {
+
+    .my-img-thumbnail {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        background: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        object-fit: contain !important;
+    }
+
+
+}
+
 
 .my-img-thumbnail2 {
     width: 70%;
@@ -300,7 +319,7 @@ ul {
 @media only screen and (max-width: 920px) {
 
     .m-mobile {
-        margin: 20px;
+        margin: 10px;
     }
 
 }
@@ -389,7 +408,7 @@ ul {
 @media only screen and (max-width: 600px) {
 
     .stat img {
-        height: 60vh;
+        height: 150px !important;
         border-radius: 30px 10px 30px 10px;
         object-fit: cover;
     }
@@ -615,7 +634,7 @@ textarea {
 @media only screen and (max-width: 768px) {
 
     .footer ul {
-        width: 50vw;
+        width: 80vw;
     }
 
 }
@@ -624,7 +643,7 @@ textarea {
 @media only screen and (max-width: 600px) {
 
     .footer ul {
-        width: 50vw;
+        width: 70vw;
     }
 
 }
