@@ -16,10 +16,9 @@
 
 <body class="body">
 
-    <div class="cloud"></div>
-
 
     <div class="main">
+        <div class="cloud"></div>
         <!-- -=-=-=-=-= NAVBAR START -=-=-=-=-= -->
 
         <nav class="navbar">
@@ -294,27 +293,35 @@
 
 
         $(document).ready(function () {
-            const audio = new Audio("asset/audio/zedd.mp3");
-            audio.loop = true;
 
-            let height = 0;
-            height = $(".main").height();
+            $(".switch").hide();
+            window.addEventListener('load', function () {
+                $(".switch").show();
+                const audio = new Audio("asset/audio/zedd.mp3");
+                audio.loop = true;
 
-            $(".cloud").hide();
-            $("#trigger ").on("change", function () {
-                if (this.checked) {
-                    $(".cloud").show();
-                    $(".cloud-btn h4").text("Normal Mode");
-                    $(".cloud").css('height', height + 'px');
-                    audio.play();
-                } else {
-                    $(".cloud-btn h4").text("Cloud Mode");
-                    $(".cloud").hide();
-                    audio.pause();
-                    audio.currentTime = 0;
-                }
 
-            });
+                let height = 0;
+                height = $(".main").height();
+
+
+
+                $(".cloud").hide();
+                $("#trigger ").on("change", function () {
+                    if (this.checked) {
+                        $(".cloud").show();
+                        $(".cloud-btn h4").text("Normal Mode");
+                        $(".cloud").css('height', height + 'px');
+                        audio.play();
+                    } else {
+                        $(".cloud-btn h4").text("Cloud Mode");
+                        $(".cloud").hide();
+                        audio.pause();
+                        audio.currentTime = 0;
+                    }
+
+                });
+            })
         });
     </script>
 
