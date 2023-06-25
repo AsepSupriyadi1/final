@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
+
 * {
     box-sizing: border-box !important;
 }
@@ -57,8 +58,41 @@ body {
     background-color: var(--black1);
 }
 
+
+
+@-webkit-keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+
 .main {
     height: max-content;
+    -webkit-animation: fade-in-bottom .6s cubic-bezier(.39, .575, .565, 1.000) both;
+    animation: fade-in-bottom .6s cubic-bezier(.39, .575, .565, 1.000) both;
 }
 
 
@@ -89,6 +123,7 @@ body {
 @-ms-viewport {
     width: device-width;
 }
+
 
 
 .container {
@@ -408,33 +443,7 @@ ul {
     }
 
 
-    @-webkit-keyframes fade-in-bottom {
-        0% {
-            -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-            opacity: 0
-        }
 
-        100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            opacity: 1
-        }
-    }
-
-    @keyframes fade-in-bottom {
-        0% {
-            -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-            opacity: 0
-        }
-
-        100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            opacity: 1
-        }
-    }
 
     .navbar ul {
         min-width: 100% !important;
@@ -442,15 +451,15 @@ ul {
         position: fixed;
         right: 0;
         top: 0;
-        z-index: 2;
+        z-index: 4;
         display: none;
         flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
         background-color: var(--black1);
         text-align: center;
-        -webkit-animation: fade-in-bottom .6s cubic-bezier(.39, .575, .565, 1.000) both;
-        animation: fade-in-bottom .6s cubic-bezier(.39, .575, .565, 1.000) both
+        /* -webkit-animation: fade-in-bottom .6s cubic-bezier(.39, .575, .565, 1.000) both;
+        animation: fade-in-bottom .6s cubic-bezier(.39, .575, .565, 1.000) both */
     }
 
     .navbar ul li {
