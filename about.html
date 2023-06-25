@@ -283,20 +283,34 @@
 
 
     <script>
+
+
+
         $(document).ready(function () {
             const audio = new Audio("asset/audio/zedd.mp3");
-            var height = $(".main").height();
-            var width = document.getElementById('mainnn').offsetHeight;
-            console.log(height, width)
+            audio.loop = true;
+
+            let height = 0;
+            height = $(".main").height();
+
             $(".cloud").hide();
-            $("#trigger").on("click", function () {
-                $(".cloud").css('height', 0 + 'px');
-                $(".cloud").show();
-                $(".cloud").css('height', width + 'px');
-                audio.play();
+            $("#trigger ").on("change", function () {
+                if (this.checked) {
+                    $(".cloud").show();
+                    $(".cloud-btn h4").text("Normal Mode");
+                    $(".cloud").css('height', height + 'px');
+                    audio.play();
+                } else {
+                    $(".cloud-btn h4").text("Cloud Mode");
+                    $(".cloud").hide();
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+
             });
         });
     </script>
+
 
 
 </body>

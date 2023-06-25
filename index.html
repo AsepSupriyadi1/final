@@ -290,10 +290,16 @@
 
 
     <script>
+
+
+
         $(document).ready(function () {
             const audio = new Audio("asset/audio/zedd.mp3");
+            audio.loop = true;
+
             let height = 0;
             height = $(".main").height();
+
             $(".cloud").hide();
             $("#trigger ").on("change", function () {
                 if (this.checked) {
