@@ -17,7 +17,7 @@
     <div class="cloud"></div>
     <!-- -=-=-=-=-= NAVBAR START -=-=-=-=-= -->
 
-    <div class="main">
+    <div class="main" id="mainnn">
 
 
 
@@ -26,7 +26,7 @@
                 <img src="asset/logo/logo.png" alt="">
 
                 <ul>
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -132,18 +132,19 @@
                         <ul class="list-container">
                             <li class="list-item">
                                 <span class="date"> 2021</span>
+                                <h4>Jasa Website Biz</h4>
                                 <h2>Wordpress Web Developer</h2>
-                                <h4>Sekolah Tinggi Teknologi Bandung</h4>
+                                <h5>Duration : 5 Month</h5>
                                 <h5 class="mt-4">Job Description :</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab magni
-                                    repellendus
-                                    repellat, necessitatibus alias rem molestias consectetur totam sequi blanditiis
-                                    veritatis? Nulla debitis sapiente, doloremque quia minus quisquam aspernatur numquam
-                                    odio eligendi laudantium delectus nam iusto sequi nemo aliquid veniam voluptates sed
-                                    ad
-                                    ipsam. Dolore laboriosam
+                                <p class="mb-2">
+                                    Experienced WordPress Web Developer specializing in client projects. Proficient in
+                                    all stages of website development, from planning to deployment. Skilled in using
+                                    Elementor to create visually appealing websites. Expertise in crafting engaging
+                                    landing pages and full page websites. Passionate about delivering innovative web
+                                    solutions and optimizing user experiences.
                                 </p>
+                                <a href="https://jasawebsite.biz/" class="text-light" target="_blank">See the
+                                    company</a>
                             </li>
                         </ul>
                     </div>
@@ -277,11 +278,13 @@
         $(document).ready(function () {
             const audio = new Audio("asset/audio/zedd.mp3");
             var height = $(".main").height();
-
+            var width = document.getElementById('mainnn').offsetHeight;
+            console.log(height, width)
             $(".cloud").hide();
             $("#trigger").on("click", function () {
+                $(".cloud").css('height', 0 + 'px');
                 $(".cloud").show();
-                $(".cloud").css('height', height + 'px');
+                $(".cloud").css('height', width + 'px');
                 audio.play();
             });
         });

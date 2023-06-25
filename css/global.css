@@ -24,6 +24,14 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323232", endColorstr="#171717", GradientType=1);
 }
 
+.bg-linear:hover {
+    background: rgb(50, 50, 50);
+    background: -moz-linear-gradient(20deg, rgb(68, 68, 68) 0%, rgb(26, 26, 26) 58%);
+    background: -webkit-linear-gradient(20deg, rgb(68, 68, 68) 0%, rgb(26, 26, 26) 58%);
+    background: linear-gradient(160deg, rgb(68, 68, 68) 0%, rgb(26, 26, 26) 58%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323232", endColorstr="#171717", GradientType=1);
+}
+
 
 html {
     font-family: sans-serif;
@@ -56,7 +64,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    opacity: 0.1;
+    opacity: 0.2;
     background: url('../asset/img/cloud.png');
     background-size: cover;
     animation: animate 60s linear infinite;
@@ -187,6 +195,10 @@ ul {
     filter: brightness(90%);
 }
 
+
+.m-items {
+    position: relative;
+}
 
 
 
