@@ -343,6 +343,34 @@ ul {
 
 @media only screen and (max-width: 800px) {
 
+    @-webkit-keyframes rotate-in-center {
+        0% {
+            -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+            opacity: 0
+        }
+
+        100% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+            opacity: 1
+        }
+    }
+
+    @keyframes rotate-in-center {
+        0% {
+            -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+            opacity: 0
+        }
+
+        100% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+            opacity: 1
+        }
+    }
+
     .nav-container button {
         display: none;
     }
@@ -358,6 +386,8 @@ ul {
         top: 60px;
         right: 60px;
         z-index: 3;
+        -webkit-animation: rotate-in-center .6s cubic-bezier(.25, .46, .45, .94) both;
+        animation: rotate-in-center .6s cubic-bezier(.25, .46, .45, .94) both
     }
 
 
@@ -377,6 +407,35 @@ ul {
         transform: rotate(-135deg);
     }
 
+
+    @-webkit-keyframes fade-in-bottom {
+        0% {
+            -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+            opacity: 0
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1
+        }
+    }
+
+    @keyframes fade-in-bottom {
+        0% {
+            -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+            opacity: 0
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1
+        }
+    }
+
     .navbar ul {
         min-width: 100% !important;
         height: 100dvh;
@@ -390,6 +449,8 @@ ul {
         align-items: center !important;
         background-color: var(--black1);
         text-align: center;
+        -webkit-animation: fade-in-bottom .6s cubic-bezier(.39, .575, .565, 1.000) both;
+        animation: fade-in-bottom .6s cubic-bezier(.39, .575, .565, 1.000) both
     }
 
     .navbar ul li {
@@ -399,6 +460,7 @@ ul {
     .navbar ul li a {
         font-size: 2em;
     }
+
 
 }
 
