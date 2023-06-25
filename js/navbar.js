@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   $(".nav-container .hamburger-menu").on("click", () => {
     $(".navbar ul").css("display", "flex");
-    $(".navbar .cross-menu").css("display", "block");
+    $(".cross-menu").css("display", "block");
   });
 
   $(".nav-container .cross-menu").on("click", () => {
