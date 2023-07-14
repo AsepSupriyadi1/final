@@ -243,6 +243,10 @@
                                     <div class="text-center skills-item">
                                         <object data="asset/svg/skills/icons8-jquery.svg"> </object>
                                         <h5>JQuery</h5>
+
+
+
+
                                     </div>
                                 </div>
                             </div>
@@ -271,7 +275,7 @@
                     <li><a href="">Portfolio</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
-                <p>© 2023 All rights reserved by Asep Supriyadi</p>
+                <p>© 2023 All rights reserved by Asep Supriyadi </p>
             </div>
 
         </footer>
@@ -299,9 +303,9 @@
 
         $(document).ready(function () {
 
-            $(".switch").hide();
+            $(".switch").attr("disabled");
             window.addEventListener('load', function () {
-                $(".switch").show();
+                $(".switch").removeAttr("disabled");
                 const audio = new Audio("asset/audio/zedd.mp3");
                 audio.loop = true;
 
